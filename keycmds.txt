@@ -1,0 +1,20 @@
+# 1. Create virtual environment (do this ONCE)
+python -m venv venv
+
+# 2. Activate the environment:
+#    Windows:
+venv\Scripts\activate
+#    Mac/Linux:
+source venv/bin/activate
+
+# 3. Install dependencies (you'll see packages downloading)
+pip install -r requirements.txt
+
+# 4. Initialize database (creates database file)
+flask shell
+>>> from app import db
+>>> db.create_all()
+>>> exit()
+
+# 5. Run the website!
+python run.py
